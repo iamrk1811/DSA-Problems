@@ -1,13 +1,19 @@
-import questions.Array.MajorityElement;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
+
+import questions.Array.MedianOfTwoSortedArray;
+import questions.Array.MedianOfTwoSortedArray;
 public class App {
     public static void main(String[] args) {
-        MajorityElement obj = new MajorityElement();
-        int[] arr = {2, 2, 1, 1, 1, 2, 2}; // target 5
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        StringTokenizer st = new StringTokenizer(br.readLine());
+        MedianOfTwoSortedArray obj = new MedianOfTwoSortedArray();
+        int[] arr1 = {1, 2, 4};
+        int[] arr2 = {3, 5};
 
-//        int[] arr = {4,5,6,7,8,1,2,3};
-
-        int n = arr.length;
-        System.out.println(obj.solve(arr, n));
+//        int n = arr.length;
+        System.out.println(obj.solve1(arr1, arr2));
 
     }
 }
