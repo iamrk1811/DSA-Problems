@@ -97,6 +97,6 @@ public class MedianOfTwoSortedArray {
         arr2[j] = temp;
     }
     public double solve2(int[] nums1, int[] nums2) {
-
+        return 0.0;
     }
 }
