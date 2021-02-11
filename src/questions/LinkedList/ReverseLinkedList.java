@@ -29,4 +29,12 @@ public class ReverseLinkedList {
 
         return prev;
     }
+    public Node recursive(Node head) {
+        if (head == null || head.next == null) return head;
+
+        Node node = recursive(head.next);
+        head.next.next = head;
+        head.next = null;
+        return node;
+    }
 }
