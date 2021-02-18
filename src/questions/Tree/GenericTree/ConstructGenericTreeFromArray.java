@@ -6,7 +6,7 @@ public class ConstructGenericTreeFromArray {
     public GenericTreeNode solve(int[] arr) {
         Stack<GenericTreeNode> stack = new Stack<>();
         GenericTreeNode root = null;
-        for (int val: arr) {
+        for (int val : arr) {
             if (val == -1) {
                 stack.pop();
             } else {
