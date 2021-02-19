@@ -1,22 +1,10 @@
-import questions.Array.KthLargestElement;
-import questions.Array.LargestSumContiguousArray;
-import questions.Array.Matrix.MergeIntervals;
-import questions.Array.MergeTwoSortedArrayWithoutExtraSpace;
-import questions.LinkedList.LinkedList;
-import questions.LinkedList.Node;
-import questions.LinkedList.ReverseLinkedList;
-import questions.Queue.MyQueue;
-import questions.SearchingAndSorting.CountSubArrayWithSumZero;
-import questions.Stack.MyStack;
-import questions.Stack.TwoStackUsingArray;
+import questions.Tree.BinaryTree.BinaryTreeTraversal;
+import questions.Tree.BinaryTree.ConstructBinaryTreeFromArray;
+import questions.Tree.BinaryTree.LevelLineWiseBinary;
+import questions.Tree.BinaryTree.TreeNode;
 import questions.Tree.GenericTree.*;
-import java.io.BufferedReader;
+
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.StringTokenizer;
 
 
 class App {
@@ -25,7 +13,10 @@ class App {
         ConstructGenericTreeFromArray obj2 = new ConstructGenericTreeFromArray();
         GenericTreeNode root = obj2.solve(arr);
 
+        Integer[] binaryTreeArray = {50, 25, 12, null, null, 37, 30, null, null, null, 75, 62, null, 70, null, null, 87, null, null};
+        TreeNode node = ConstructBinaryTreeFromArray.construct(binaryTreeArray);
 
+        BinaryTreeTraversal.inOrderIterative(node);
 //        System.out.println();
 //        Test.test();
     }
