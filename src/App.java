@@ -17,10 +17,13 @@ class App {
         Integer[] binaryTreeArray = {50, 25, 12, null, null, 37, 30, null, null, null, 75, 62, null, 70, null, null, 87, null, null};
         TreeNode node = ConstructBinaryTreeFromArray.construct(binaryTreeArray);
 
-        int[] res = new MaximumOfAllSubArraysOfWindowSizeK().solve(
-                new int[]{1, 2, 3, 1, 4, 5, 2, 3, 6}, 3
+        int res = new KthMissingPositiveNumber().solve(
+                new int[]{
+                        5,6,7,8,9
+
+                },9
         );
-        System.out.println(Arrays.toString(res));
+        System.out.println(res);
 //        Test.test();
     }
 }
