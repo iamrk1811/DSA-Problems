@@ -17,13 +17,8 @@ class App {
         Integer[] binaryTreeArray = {50, 25, 12, null, null, 37, 30, null, null, null, 75, 62, null, 70, null, null, 87, null, null};
         TreeNode node = ConstructBinaryTreeFromArray.construct(binaryTreeArray);
 
-        int res = new KthMissingPositiveNumber().solve(
-                new int[]{
-                        5,6,7,8,9
-
-                },9
-        );
-        System.out.println(res);
+        int[] res = new KthRowOfPascalTriangle().solve(5);
+        System.out.println(Arrays.toString(res));
 //        Test.test();
     }
 }
