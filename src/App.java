@@ -1,12 +1,11 @@
-import questions.Array.ArrayList.GetMazePaths;
-import questions.Array.ArrayList.GetStairPaths;
-import questions.Array.ArrayList.GetStairPathsCount;
+import questions.Array.ArrayList.*;
 import questions.Tree.BinaryTree.ConstructBinaryTreeFromArray;
 import questions.Tree.BinaryTree.TreeNode;
 import questions.Tree.GenericTree.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 class App {
     public static void main(String[] args) throws IOException {
@@ -17,9 +16,14 @@ class App {
         Integer[] binaryTreeArray = {50, 25, 12, null, null, 37, 30, null, null, null, 75, 62, null, 70, null, null, 87, null, null};
         TreeNode node = ConstructBinaryTreeFromArray.construct(binaryTreeArray);
 
-        ArrayList<String> res = new GetMazePaths().solve(1,1,3,3);
-        System.out.println(res.size());
-        System.out.println(res);
+
+//        new PrintPermutations().print("ABCD","");
 //        Test.test();
+        Test t1 = new Test();
+        List<List<Integer>> res = t1.permute(new int[]{1, 2, 3});
+
+        for (List<Integer> temp : res) {
+            System.out.println(temp);
+        }
     }
 }

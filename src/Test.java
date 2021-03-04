@@ -1,69 +1,44 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
+import java.lang.reflect.Array;
+import java.util.*;
 public class Test {
-    public static void test() {
-        int[] array = {1, 2, 3, 6, 3, 6, 1};
-        int n = array.length;
-        for (int i = 0; i < array.length; i++) {
-
-        }
-    }
-
-}
-
-class Solution {
-    public Integer countSmaller(int[] nums) {
-        int[] res = mergeCounting(nums, 0, nums.length - 1);
-        System.out.println(Arrays.toString(nums));
-        System.out.println(Arrays.toString(res));
-        return 0;
-    }
-
-    private int[] mergeCounting(int[] nums, int start, int end) {
-        int[] res = new int[nums.length];
-        Integer count = new Integer(0);
-        if (start < end) {
-            int mid = (start + end) / 2;
-            mergeCounting(nums, start, mid);
-            mergeCounting(nums, mid + 1, end);
-            mergeTwoSortedArray(nums, start, mid, end, res);
-        }
+    public List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> res = getPermutation(nums);
         return res;
     }
-    private Integer mergeTwoSortedArray(int[] nums, int start, int mid, int end, int[] res) {
-        int[] arr1 = new int[mid - start + 1];
-        int[] arr2 = new int[end - mid];
+    private List<List<Integer>> getPermutation(int[] nums) {
+        if (nums.length == 1) {
+            List<List<Integer>> res = new ArrayList<>();
+            ArrayList<Integer> temp = new ArrayList<>();
+            temp.add(nums[0]);
+            res.add(temp);
+            return res;
+        }
 
-        for (int i = 0; i < arr1.length; i++)
-            arr1[i] = nums[start + i];
-        for (int i = 0; i < arr2.length; i++)
-            arr2[i] = nums[mid + i + 1];
+        List<List<Integer>> res = new ArrayList<>();
 
-        int i = 0, j = 0, k = start;
-        int count = 0;
-        for (; i < arr1.length && j < arr2.length; k++) {
-            if (arr1[i] > arr2[j]) {
-                nums[k] = arr2[j];
-                res[k] += arr1.length - i;
-                count += arr1.length - i;
-                System.out.println(arr1[i] + " " + arr2[j]);
-                j++;
-            } else {
-                nums[k] = arr1[i];
-                i++;
+        for (int i = 0; i < nums.length; i++) {
+            int val = nums[i];
+
+            int[] finalArray = new int[nums.length - 1];
+            int index = 0;
+
+            for (int j = 0; j < i; j++) {
+                finalArray[index] = nums[j];
+                index++;
             }
-        }
-        while (i < arr1.length) {
-            nums[k] = arr1[i];
-            i++; k++;
-        }
 
-        while (j < arr2.length) {
-            nums[k] = arr2[j];
-            j++; k++;
+            for (int j = i + 1; j < nums.length; j++) {
+                finalArray[index] = nums[j];
+                index++;
+            }
+
+            List<List<Integer>> temp = getPermutation(finalArray);
+
+            for (List<Integer> dummy : temp) {
+                dummy.add(val);
+            }
+            res.addAll(temp);
         }
-        return count;
+        return res;
     }
 }
