@@ -19,11 +19,6 @@ class App {
 
 //        new PrintPermutations().print("ABCD","");
 //        Test.test();
-        Test t1 = new Test();
-        List<List<Integer>> res = t1.permute(new int[]{1, 2, 3});
-
-        for (List<Integer> temp : res) {
-            System.out.println(temp);
-        }
+        new PrintEncoding().print("655196", "");
     }
 }

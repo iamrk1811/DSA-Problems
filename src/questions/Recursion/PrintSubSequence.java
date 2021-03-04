@@ -1,4 +1,4 @@
-package questions.Array.ArrayList;
+package questions.Recursion;
 
 public class PrintSubSequence {
     public void print(String str, String ans) {

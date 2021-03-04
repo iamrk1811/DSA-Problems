@@ -1,4 +1,4 @@
-package questions.Array.ArrayList;
+package questions.Recursion;
 
 public class PrintStairPaths {
     public void print(int destination, String ans) {

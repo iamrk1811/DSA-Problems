@@ -1,4 +1,4 @@
-package questions.Array.ArrayList;
+package questions.Recursion;
 
 public class PrintPermutations {
     public void print(String str, String ans) {

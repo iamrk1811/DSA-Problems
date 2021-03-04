@@ -1,4 +1,4 @@
-package questions.Array.ArrayList;
+package questions.Recursion;
 
 public class PrintKPC {
     public void print(String[] arr, String input, String ans) {

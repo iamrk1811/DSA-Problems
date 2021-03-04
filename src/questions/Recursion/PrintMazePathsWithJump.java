@@ -1,4 +1,4 @@
-package questions.Array.ArrayList;
+package questions.Recursion;
 
 public class PrintMazePathsWithJump {
     public void print(int sourceRow, int sourceCol, int desRow, int desCol, String ans) {
