@@ -23,12 +23,11 @@ class App {
         TreeNode node = ConstructBinaryTreeFromArray.construct(binaryTreeArray);
 
 //        Scanner scanner = new Scanner(System.in);
-//        ArrayList<Edge>[] graph = new CreateGraph().create();
+        ArrayList<Edge>[] graph = new CreateGraph().create();
 
-        ArrayList<EdgeWithoutWeight>[] graph = new CreateGraphWithoutWeight().create();
+//        ArrayList<EdgeWithoutWeight>[] graph = new CreateGraphWithoutWeight().create();
 
-        int res = new PerfectFriends().count(graph);
-        System.out.println(res);
+        new HamiltonianPathAndCycle().solve(graph, 0);
 //        System.out.println(new IsGraphConnected().solve(graph, 0));
 //        7
 //        8
