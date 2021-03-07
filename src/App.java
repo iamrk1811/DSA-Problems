@@ -1,7 +1,4 @@
-import questions.Graph.CreateGraph;
-import questions.Graph.Edge;
-import questions.Graph.HasPath;
-import questions.Graph.PrintAllPath;
+import questions.Graph.*;
 import questions.Stack.*;
 import questions.Tree.BinaryTree.ConstructBinaryTreeFromArray;
 import questions.Tree.BinaryTree.TreeNode;
@@ -26,9 +23,7 @@ class App {
         ArrayList<Edge>[] graph = new CreateGraph().create();
 
 
-        new PrintAllPath().print(graph, 0, 6, new boolean[graph.length], "");
-        System.out.println("x");
-//        Test.test();
+        System.out.println(new IsGraphConnected().solve(graph, 0));
 //        7
 //        8
 //        0 1 10
