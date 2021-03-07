@@ -2,7 +2,7 @@ package questions.Graph;
 
 import java.util.ArrayList;
 
-public class GetConnected {
+public class GetConnectedComponents {
 
     public ArrayList<ArrayList<Integer>> solve(ArrayList<Edge>[] graph, int source) {
         ArrayList<ArrayList<Integer>> res = new ArrayList<>();
