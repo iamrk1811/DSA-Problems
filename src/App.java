@@ -26,19 +26,15 @@ class App {
         ArrayList<Edge>[] graph = new CreateGraph().create();
 
 //        ArrayList<EdgeWithoutWeight>[] graph = new CreateGraphWithoutWeight().create();
-
-        new HamiltonianPathAndCycle().solve(graph, 0);
+        new MinimumWireRequiredToConnect().find(graph, 0);
 //        System.out.println(new IsGraphConnected().solve(graph, 0));
-//        7
-//        8
-//        0 1 10
-//        1 2 10
-//        2 3 10
-//        0 3 10
-//        3 4 10
-//        4 5 10
-//        5 6 10
-//        4 6 10
+//        0 via 0 @ 0
+//        1 via 01 @ 10
+//        2 via 012 @ 20
+//        5 via 0125 @ 25
+//        4 via 01254 @ 28
+//        6 via 01256 @ 28
+//        3 via 012543 @ 30
 
     }
 }
