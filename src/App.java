@@ -25,8 +25,8 @@ class App {
 //        Scanner scanner = new Scanner(System.in);
         ArrayList<Edge>[] graph = new CreateGraph().create();
 
-//        ArrayList<EdgeWithoutWeight>[] graph = new CreateGraphWithoutWeight().create();
-        new MinimumWireRequiredToConnect().find(graph, 0);
+//        ArrayList<EdgeWithoutWeight>[] graph = new CreateDirectedGraph().create();
+        new IterativeDFS().solve(graph, 2);
 //        System.out.println(new IsGraphConnected().solve(graph, 0));
 //        0 via 0 @ 0
 //        1 via 01 @ 10
