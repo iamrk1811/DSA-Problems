@@ -1,17 +1,11 @@
-import questions.Graph.*;
-import questions.Stack.*;
+import questions.StackAndQueue.*;
 import questions.Tree.BinaryTree.ConstructBinaryTreeFromArray;
 import questions.Tree.BinaryTree.TreeNode;
 import questions.Tree.GenericTree.*;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
-import java.util.StringTokenizer;
 
 class App {
     public static void main(String[] args) throws IOException {
@@ -23,18 +17,11 @@ class App {
         TreeNode node = ConstructBinaryTreeFromArray.construct(binaryTreeArray);
 
 //        Scanner scanner = new Scanner(System.in);
-        ArrayList<Edge>[] graph = new CreateGraph().create();
+//        ArrayList<Edge>[] graph = new CreateGraph().create();
 
 //        ArrayList<EdgeWithoutWeight>[] graph = new CreateDirectedGraph().create();
-        new IterativeDFS().solve(graph, 2);
-//        System.out.println(new IsGraphConnected().solve(graph, 0));
-//        0 via 0 @ 0
-//        1 via 01 @ 10
-//        2 via 012 @ 20
-//        5 via 0125 @ 25
-//        4 via 01254 @ 28
-//        6 via 01256 @ 28
-//        3 via 012543 @ 30
 
+        ArrayList<Integer> res = new SmallestNumberFollowingPattern().solve("ddidddid");
+        System.out.println(res);
     }
 }

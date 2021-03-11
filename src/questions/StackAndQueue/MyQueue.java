@@ -1,4 +1,4 @@
-package questions.Queue;
+package questions.StackAndQueue;
 
 public class MyQueue {
     int[] arr;

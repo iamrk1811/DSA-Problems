@@ -1,4 +1,4 @@
-package questions.Stack;
+package questions.StackAndQueue;
 
 public class TwoStackUsingArray {
     int[] arr;

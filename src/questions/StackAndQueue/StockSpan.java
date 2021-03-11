@@ -1,6 +1,5 @@
-package questions.Stack;
+package questions.StackAndQueue;
 
-import java.util.Arrays;
 import java.util.Stack;
 class Pair {
     int data;
