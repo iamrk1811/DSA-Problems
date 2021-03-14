@@ -42,9 +42,28 @@ class App {
         node7.next = node8;
         node8.next = null;
 
+        Node addNode1 = new Node(9);
+        Node addNode2 = new Node(9);
+        Node addNode3 = new Node(9);
+        Node addNode4 = new Node(9);
 
-        Node res = new ReverseLinkedListInGroupSizeOfK().solve(node1, 3);
+
+        addNode1.next = addNode2;
+        addNode2.next = addNode3;
+        addNode3.next = addNode4;
+        addNode4.next = null;
+
+        Node add2Node1 = new Node(9);
+        Node add2Node2 = new Node(9);
+        Node add2Node3 = new Node(9);
+        add2Node1.next = add2Node2;
+        add2Node2.next = add2Node3;
+        add2Node3.next = null;
+
+
+        Node res = new AddTwoLinkedList().solve(add2Node1, addNode1);
         Node.display(res);
+
 
 
 //        list1.printLinkedList();
