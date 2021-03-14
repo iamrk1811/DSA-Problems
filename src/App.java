@@ -1,3 +1,5 @@
+import questions.HashHeap.MedianPriorityQueue;
+import questions.HashHeap.MyPriorityQueue;
 import questions.LinkedList.*;
 import questions.StackAndQueue.*;
 import questions.Tree.BinaryTree.ConstructBinaryTreeFromArray;
@@ -61,8 +63,13 @@ class App {
         add2Node3.next = null;
 
 
-        Node res = new AddTwoLinkedList().solve(add2Node1, addNode1);
-        Node.display(res);
+        MyPriorityQueue pq = new MyPriorityQueue();
+        pq.add(10);
+        pq.add(30);
+        pq.add(20);
+        System.out.println(pq.peek());
+        pq.remove();
+        System.out.println(pq.peek());
 
 
 
