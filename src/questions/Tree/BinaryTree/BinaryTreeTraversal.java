@@ -10,10 +10,10 @@ public class BinaryTreeTraversal {
         while (!stack.isEmpty()) {
             TreeNode temp = stack.pop();
             System.out.print(temp.data + " ");
-            if (temp.left != null)
-                stack.push(temp.left);
             if (temp.right != null)
                 stack.push(temp.right);
+            if (temp.left != null)
+                stack.push(temp.left);
         }
     }
 
@@ -31,6 +31,7 @@ public class BinaryTreeTraversal {
         System.out.print(node.data + " ");
         inOrderRec(node.right);
     }
+
     public static void inOrderIterative(TreeNode node) {
         Stack<TreeNode> stack = new Stack<>();
         TreeNode current = node;
@@ -65,11 +66,12 @@ public class BinaryTreeTraversal {
         }
 
     }
+
     public static void postOrderIterativeUsingOneStack(TreeNode node) {
         Stack<TreeNode> stack = new Stack<>();
 //        stack.push(node);
         TreeNode current = node, prev = null;
-        while (current != null || !stack.isEmpty() ) {
+        while (current != null || !stack.isEmpty()) {
             if (current != null) {
 //                left part
                 stack.push(current);
@@ -90,6 +92,8 @@ public class BinaryTreeTraversal {
             }
         }
     }
+
+
 
     public static void postOrderRec(TreeNode node) {
         if (node == null) return;

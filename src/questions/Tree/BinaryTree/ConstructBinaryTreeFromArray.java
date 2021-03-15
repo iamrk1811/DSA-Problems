@@ -3,16 +3,17 @@ package questions.Tree.BinaryTree;
 import java.util.ArrayList;
 import java.util.Stack;
 
-class Pair {
-    TreeNode node;
-    int val = 1;
 
-    public Pair(TreeNode node) {
-        this.node = node;
-    }
-}
 
 public class ConstructBinaryTreeFromArray {
+    private static class Pair {
+        TreeNode node;
+        int val = 1;
+
+        public Pair(TreeNode node) {
+            this.node = node;
+        }
+    }
     public static TreeNode construct(Integer[] arr) {
         Stack<Pair> stack = new Stack<>();
         TreeNode root = new TreeNode(arr[0], null, null);

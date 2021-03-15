@@ -1,7 +1,9 @@
 import questions.HashHeap.MedianPriorityQueue;
+import questions.HashHeap.MyHashMap;
 import questions.HashHeap.MyPriorityQueue;
 import questions.LinkedList.*;
 import questions.StackAndQueue.*;
+import questions.Tree.BinaryTree.BinaryTreeTraversal;
 import questions.Tree.BinaryTree.ConstructBinaryTreeFromArray;
 import questions.Tree.BinaryTree.TreeNode;
 import questions.Tree.GenericTree.*;
@@ -19,10 +21,8 @@ class App {
         Integer[] binaryTreeArray = {50, 25, 12, null, null, 37, 30, null, null, null, 75, 62, null, 70, null, null, 87, null, null};
         TreeNode node = ConstructBinaryTreeFromArray.construct(binaryTreeArray);
 
-//        Scanner scanner = new Scanner(System.in);
-//        ArrayList<Edge>[] graph = new CreateGraph().create();
-
-//        ArrayList<EdgeWithoutWeight>[] graph = new CreateDirectedGraph().create();
+//        BinaryTreeTraversal.postOrderIterativeUsingOneStack(node);
+        BinaryTreeTraversal.postOrderTraversalUsingOneStack2(node);
 
         MyLinkedList list1 = new MyLinkedList();
 
@@ -61,15 +61,6 @@ class App {
         add2Node1.next = add2Node2;
         add2Node2.next = add2Node3;
         add2Node3.next = null;
-
-
-        MyPriorityQueue pq = new MyPriorityQueue();
-        pq.add(10);
-        pq.add(30);
-        pq.add(20);
-        System.out.println(pq.peek());
-        pq.remove();
-        System.out.println(pq.peek());
 
 
 
