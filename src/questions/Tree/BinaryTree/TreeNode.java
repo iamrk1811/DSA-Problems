@@ -1,7 +1,7 @@
 package questions.Tree.BinaryTree;
 
 public class TreeNode {
-    int data;
+    public int data;
     TreeNode left = null;
     TreeNode right = null;
 
