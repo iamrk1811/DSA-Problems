@@ -20,7 +20,7 @@ public class ZeroOneKnapSackProblem {
         }
     }
 
-    public int solution2(int[] value, int[] weight, int n, int W) {
+    public int solutionTopDown(int[] value, int[] weight, int n, int W) {
         int[][] qb = new int[n + 1][W + 1];
 
         for (int i = 0, j = 0; j < W + 1; j++) qb[i][j] = 0;
