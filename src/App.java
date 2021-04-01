@@ -25,6 +25,6 @@ class App {
         TreeNode nodeT = ConstructBinaryTreeFromArray.construct(bna);
 
 
-        System.out.println(new CoinChangePermutation().solve(new int[]{2,3,5}, 7));
+        System.out.println(new CountABCSubsequence().solve("abcabc"));
     }
 }
